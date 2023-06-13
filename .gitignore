@@ -1,10 +1,12 @@
 # Ignore node_modules directories
 **/node_modules/
 
+**/back-end/utils/mongoDB.js
+
 # Ignore package-lock.json files
 **/package-lock.json
 
 # Ignore .vscode directory
 .vscode/
 
-*.DS_Store
+.DS_Store
