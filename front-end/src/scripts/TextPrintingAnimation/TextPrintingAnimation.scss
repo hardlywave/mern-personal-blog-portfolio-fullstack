@@ -1,0 +1,13 @@
+.cursor {
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    color: #f00;
+  }
+  50% {
+    color: #0f0;
+  }
+}

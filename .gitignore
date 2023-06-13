@@ -1,0 +1,10 @@
+# Ignore node_modules directories
+**/node_modules/
+
+# Ignore package-lock.json files
+**/package-lock.json
+
+# Ignore .vscode directory
+.vscode/
+
+.DS_Store/

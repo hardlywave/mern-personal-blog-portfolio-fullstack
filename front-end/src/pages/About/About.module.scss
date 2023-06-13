@@ -1,0 +1,33 @@
+.preload {
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.preload-text {
+  font-family: monospace;
+  font-size: 40px;
+  font-weight: normal;
+  line-height: 1.5;
+  color: #333;
+  overflow: hidden;
+  animation: blink 5s infinite;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    color: rgb(154, 0, 0);
+  }
+  50% {
+    color: rgb(89, 0, 152);
+  }
+}
+
+.skip-button {
+  width: fit-content;
+  height: fit-content;
+  bottom: 50px;
+  right: 50px;
+}
