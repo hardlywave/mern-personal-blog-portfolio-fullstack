@@ -5,8 +5,11 @@ import { useParams } from "react-router-dom";
 import { Post } from "../components/Post";
 import { Index } from "../components/AddComment";
 import { CommentsBlock } from "../components/CommentsBlock";
+import { useSelector } from "react-redux";
+import { selectIsAuth } from "../redux/slices/auth.js";
 
 export const FullPost = () => {
+  const isAuth = useSelector(selectIsAuth);
   const [data, setData] = React.useState();
   const [isLoading, setLoading] = React.useState(true);
   const { id } = useParams();
@@ -59,7 +62,7 @@ export const FullPost = () => {
         ]}
         isLoading={false}
       >
-        <Index {...data.user} />
+        {isAuth ? <Index {...data.user} /> : ""}
       </CommentsBlock>
     </>
   );
