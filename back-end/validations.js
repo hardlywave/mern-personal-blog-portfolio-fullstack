@@ -27,6 +27,6 @@ export const postCreateValidation = [
       min: 10,
     })
     .isString(),
-  body("tags", "Tags foramt is wrong").optional().isString(),
+  body("tags", "Tags foramt is wrong").optional().isArray(),
   body("imageUrl", "The link provided is invalid").optional().isString(),
 ];

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { TextPrintingAnimation } from "../../scripts/TextPrintingAnimation";
 import Button from "@mui/material/Button";
 import styles from "./About.module.scss";
+import { Skills } from "../../components/";
 
 export const About = () => {
   const [showMore, setShowMore] = useState(false);
@@ -32,7 +33,7 @@ export const About = () => {
           <span
             className={`${styles["preload-text"]} print`}
             data-cursor="|"
-            data-remove="50"
+            data-remove="20"
             data-delay="50"
             data-pouse="2000"
             style={{ opacity: isVisiable }}
@@ -51,32 +52,57 @@ export const About = () => {
         </div>
       ) : (
         <div>
-          <header>
-            <h1>About Me and This Project</h1>
-          </header>
-          <section>
-            <h2>Denis Tsimafeyenka</h2>
+          <section className={styles.about}>
+            <div className={styles.container}>
+              <h1>About Me</h1>
+              <p>
+                Hello, I'm Denis Tsimafeyenka, an innovative Frontend Developer
+                with a passion for crafting exceptional user experiences. I
+                specialize in JavaScript, TypeScript, and Next.js, and I'm
+                proficient in building and maintaining responsive and scalable
+                projects.
+              </p>
+              <div class={styles["social-icons"]}>
+                <a
+                  href="https://github.com/hardlywave"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="https://1000logos.net/wp-content/uploads/2021/05/GitHub-logo.png"
+                    alt="GitHub Profile"
+                  />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/denis-tsimafeyenka/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="https://cdn-icons-png.flaticon.com/512/1384/1384014.png"
+                    alt="LinkedIn Profile"
+                  />
+                </a>
+              </div>
+            </div>
+            <div className={styles.skills}>
+              <h2>Tech Stack</h2>
+              <Skills />
+            </div>
+          </section>
+          <section className={styles.description}>
             <p>
-              Hello, I'm Denis Tsimafeyenka, an innovative Frontend Developer
-              with a passion for crafting exceptional user experiences. I
-              specialize in JavaScript, TypeScript, and Next.js, and I'm
-              proficient in building and maintaining responsive and scalable
-              projects.
-            </p>
-            <p>
-              Welcome to my personal blog, a hub for all things web development!
-              Here, I share valuable insights, tips, and tutorials on JavaScript
-              (JS), TypeScript (TS), and popular libraries like React. Whether
-              you're a beginner or an experienced developer, you'll find a
-              wealth of information to enhance your skills and stay up to date
-              with the latest trends in the industry. Explore the various posts
-              covering topics such as coding techniques, best practices, and
-              exciting new features. As you browse through the content, the view
-              counts on each post will give you an idea of their popularity. If
-              you'd like to engage further and leave comments on the posts,
-              simply register for an account. Join the community, expand your
-              knowledge, and let's grow together in the fascinating world of web
-              development!
+              Welcome to my personal blog! This platform serves as a hub for
+              sharing my projects, experiences, and exciting news in the
+              ever-evolving world of technology. Here, you'll find a collection
+              of articles and updates that reflect my journey as a developer and
+              enthusiast. Feel free to explore, engage, and get inspired! Delve
+              into a wide range of posts covering coding techniques, best
+              practices, and the latest features. The view counts on each post
+              provide an indication of their popularity. To actively participate
+              and leave comments on the posts, simply register for an account.
+              Join our community, expand your knowledge, and let's grow together
+              in the fascinating realm of web development!
             </p>
             {showMore && (
               <div>

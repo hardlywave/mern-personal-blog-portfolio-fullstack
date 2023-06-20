@@ -41,7 +41,7 @@ export const Header = () => {
                   variant="contained"
                   color="error"
                 >
-                  Выйти
+                  Sign out
                 </Button>
               </>
             ) : (
