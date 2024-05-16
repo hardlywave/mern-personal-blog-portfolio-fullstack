@@ -3,7 +3,15 @@ import { useDispatch, useSelector } from "react-redux";
 import { Route, Routes } from "react-router-dom";
 import { Header } from "./components";
 import React from "react";
-import { Home, FullPost, Registration, AddPost, Login, About } from "./pages";
+import {
+  Home,
+  FullPost,
+  Registration,
+  AddPost,
+  Login,
+  About,
+  Tag,
+} from "./pages";
 import { fetchAuthMe, selectIsAuth } from "./redux/slices/auth";
 
 function App() {
@@ -25,6 +33,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Registration />} />
           <Route path="/about" element={<About />} />
+          <Route path="/tags/:tagName" element={<Tag />} />
         </Routes>
         <footer>
           <p>&copy; 2023 Denis Tsimafeyenka. All rights reserved.</p>
